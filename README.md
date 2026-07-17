@@ -131,6 +131,23 @@ By completing this project, the following Power BI concepts were demonstrated:
 - Implementing role-based data access in Power BI
 - Creating a scalable, single-report architecture
 
+## Skills Demonstrated
+
+- Power BI Data Modeling
+- Relationship Management
+- Static RLS
+- Dynamic RLS
+- DAX
+- USERPRINCIPALNAME()
+- Data Security
+- Power BI Service Deployment
+- Report Testing
+- Business Intelligence
+
 # Author
 Humaira Talha
 Business Coordinator | Power BI Learner
+
+
+
+Power BI | DAX | RLS | Dynamic RLS | Data Security | Business Intelligence | Power BI Service | Analytics | Dashboard Developmen
