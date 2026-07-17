@@ -1,1 +1,61 @@
 
+# Project Screenshots
+
+## Data Model
+
+IMAGE
+**Description:**
+Shows the relationship between Departments, Employees, Sales, Products, and Security Mapping tables.
+
+## Security Mapping Table
+
+IMAGE
+**Description:**
+Maps user email addresses to department IDs for Dynamic Row-Level Security implementation.
+
+
+
+## Dynamic RLS DAX Filter
+
+IMAGE
+**Description:**
+Dynamic RLS role using:
+
+`SecurityMapping[UserEmail] = USERPRINCIPALNAME()`
+
+This ensures users can only view records related to their assigned department.
+
+## RLS Testing
+
+IMAGE
+**Description:**
+Testing performed using View As Roles to validate department-level security.
+
+## Dashboard
+
+IMAGE
+**Description:**
+Sales dashboard displaying department-specific data after RLS filtering has been applied.
+
+
+## Power BI Service Deployment
+
+IMAGE
+
+**Description:**
+Published report in Power BI Service with role assignments configured.
+
+# Screenshots
+
+The following screenshots demonstrate the complete implementation of Dynamic Row-Level Security (RLS) in Power BI.
+
+- Data model design and table relationships
+- Security Mapping table configuration
+- Dynamic RLS role definition using USERPRINCIPALNAME()
+- Role testing using View As
+- Department-specific dashboard results
+- Power BI Service deployment and security configuration
+
+These screenshots validate the end-to-end implementation of a secure, scalable reporting solution for XYZ Traders.
+
+
