@@ -24,25 +24,21 @@ Demonstrates Static RLS concepts.
 Explains Object-Level Security (OLS) for protecting sensitive employee information.
 Uses a single report and dataset for all users.
 
-# Dataset Overview
+# Data Model
+Tables
 
-The project includes the following tables:
+1 Departments
+2 Employees
+3 Products
+4 Sales
+5 Security Mapping
 
-## Departments Table
-Contains department details.
-## Employees Table
-Contains employee information.
-## Products Table
-Contains product details.
-## Sales Table
-Contains transactional sales data.
-## Security Mapping Table
-Maps users to their respective departments.
+
 ## Data Model
 Relationships were created between:
 
 1 Departments → Employees
-2  Departments → Sales
+2 Departments → Sales
 3 Products → Sales
 4 Departments → Security Mappin
 
@@ -147,5 +143,7 @@ By completing this project, the following Power BI concepts were demonstrated:
 - Designing secure enterprise reporting solutions
 - Implementing role-based data access in Power BI
 - Creating a scalable, single-report architecture
-# Conclusion
-This project demonstrates how XYZ Traders can use Power BI Row-Level Security to deliver secure, department-specific reporting through a single centralized report. By implementing Dynamic RLS with a Security Mapping table, the organization can efficiently manage user access, improve data security, reduce report duplication, and support future scalability while maintaining a consistent reporting experience across departments.
+
+# Author
+Humaira Talha
+Business Coordinator | Power BI Learner
