@@ -1,5 +1,5 @@
 # Implementing-Row-Level-Security-RLS - Power-BI
-Power BI Row-Level Security implementation using Static RLS, Dynamic RLS, and Security Mapping for Tailspin Traders.
+Power BI Row-Level Security implementation using Static RLS, Dynamic RLS, and Security Mapping for XYZ Traders.
 
 When the company decides that not all employees should have access to all company data. To address this challenge, they implementes Row-Level Security (RLS) in Microsoft Power BI, allowing a single report to securely serve multiple departments while ensuring each user only sees data relevant to their role.
 
@@ -27,61 +27,48 @@ Uses a single report and dataset for all users.
 # Data Model
 Tables
 
-1 Departments
-2 Employees
-3 Products
-4 Sales
-5 Security Mapping
+- Departments
+- Employees
+- Products
+- Sales
+- Security Mapping
 
-
-## Data Model
+## Relationships
 Relationships were created between:
 
-1 Departments → Employees
-2 Departments → Sales
-3 Products → Sales
-4 Departments → Security Mappin
+- Departments → Employees
+- Departments → Sales
+- Products → Sales
+- Departments → Security Mappin
 
-The security flow is:
-
-1  User
-   ↓
-2  Security Mapping
-   ↓
-3  Departments
-   ↓
-4  Sales
-This model enables Power BI to filter department-specific data automatically when users access the report.
-
-# Static Row-Level Security (RLS)
+## Static Row-Level Security (RLS)
 Static RLS was implemented by creating individual roles for each department.
-## Sales Role
+### Sales Role
  Departments[DepartmentName] = "Sales"
-## Marketing Role
+### Marketing Role
  Departments[DepartmentName] = "Marketing"
-## Finance Role
+### Finance Role
  Departments[DepartmentName] = "Finance"
-## Operations Role
+### Operations Role
  Departments[DepartmentName] = "Operations"
- # Benefits
 
+## Benefits
 Simple implementation.
 Easy to understand.
 Suitable for organizations with a small number of roles.
 
-# Limitations
-
+## Limitations
 Requires manual maintenance.
 Not scalable as departments or users increase.
 
-# Dynamic Row-Level Security (RLS)
+## Dynamic Row-Level Security (RLS)
 Dynamic RLS was implemented using a Security Mapping table.
-## Role Created
+### Role Created
 Department User
-## Security Filter
+### Security Filter
 SecurityMapping[UserEmail] = USERPRINCIPALNAME()
 
-# How It Works
+## How It Works
 When a user logs in:
 john@tailspin.com
 Power BI checks:
@@ -89,9 +76,10 @@ Security Mapping Table
 Filters:
 DepartmentID = 1
 Returns only Sales-related records.
-## Dynamic RLS Results
+### Dynamic RLS Results
 IMAGE
-# Object-Level Security (OLS)
+
+## Object-Level Security (OLS)
 Object-Level Security can be used to restrict access to:
 
 1 Salary
@@ -100,13 +88,12 @@ Object-Level Security can be used to restrict access to:
 
 Unlike RLS, which filters rows, OLS hides entire tables or columns from users.
 
-
 1 Employees[Salary]
 2 Employees[PersonalEmail]
 
 These fields can be hidden from standard users while remaining available to HR or senior management.
 
-# Testing and Validation
+## Testing and Validation
 The solution was validated using:
 "View As Roles" in Power BI Desktop.
 
